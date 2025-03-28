@@ -1,0 +1,32 @@
+Tranformation data (technique)
+
+raw data-> tranform -> model (ai)
+
+1. binning (Phân khoảng biến định lượng thành các khoảng định tính)
+chuyển từ số thành khoảng giá trị định tính
+
+2. encoding : label và OneHot2Encoding
+định tính, biến phân loại -> số (giá trị định lượng)
+
+3. function
+
+4. smoothing data
+
+các kĩ thuật này được sử dụng trong bước 4 data prepanation step
+
+Chuẩn hóa dữ liệu
+1. normalization
+- Max absolutescale: dữ liệu khi đi qua f(x) sẽ -> new data có bản chất của dữ liệu ban đầu nhưng thuộc vào khoảng [-1, 1]
+	công thức xnew = x old / max(|x|)
+	sử dụng công thức của py nó sẽ lưu lại giá trị max -> ta có thể tranform xuôi và ngược
+
+- Min Max scale: xnew = x - min / max - min -> sẽ đưa dữ liệu về khoảng [0, 1] -> dễ tính -> được dùng nhiều
+	sử dụng công thức của py nó sẽ lưu lại giá trị min và max -> ta có thể tranform xuôi và ngược
+
+2. standarnization
+- z.score = (x - phi(mean)) / zicma(std)
+
+3. function
+x^2, sqrt, log, sigmoid, relu, 1/x, ...
+
+hàm log làm cho dữ liệu gần với phân phối chuẩn hơn

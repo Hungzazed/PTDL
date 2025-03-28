@@ -1,0 +1,30 @@
+Phân tích dữ liệu 
+N1 : để phân tích dữ liệu ta có thể làm theo các bước như sau:
+B1: problem definition: chúng ta cần xác định vấn đề bài toán mà chúng ta mong muốn xử lý
+B2 : Data collection: 2 nhóm dữ liệu (sơ cấp và thứ cấp)
+-sơ cấp :thu thập dữ liệu bằng bảng hỏi phỏng vấn 
+(lợi ích: linh hoạt dữ liệu,đáp ứng theo như cầu)
+*nhược điểm: chất lượng data trong khảo sát không đảm bảo , muốn có data tốt phải tốn kém chi phí
+-thứ cấp : data được cung cấp bên doanh nghiệp hoặc mua 
+Tuy nhiên data này không linh hoạt theo nhu cầu 
+Ưu điểm: nhanh chóng, data có khả năng đạt tiêu chuẩn để phân tích 
+B3 : data understanding (kiểu dữ liệu) 
+-dữ liệu thường có dạng bảng (cột là biến số)
+-Kiểm tra xem có bao nhiêu biến số ,bao nhiêu dòng
+-ý nghĩa lưu trữ dữ liệu từng biến số 
+-xác định loại biến (2 loại :định tính định lượng)
+5 mức thang đo 
+Mức 1 :định danh (VD Mssv )không có sự so sánh hơn kém
+Mức 2: phân loại (vđ giới tính) có sự khác biệt nhưng không so sánh 
+Mức 3 : thứ bậc (vđ huy chương) có sự so sánh hơn kém tuy nhiên không rõ ràng 
+Mức 4 : khoảng (vđ lương) có sự so sánh hơn kém tuy nhiên sự so sánh chưa được rõ ràng cụ thể (định lug)
+Mức 5 : tỷ lệ ( vd tuổi) so sánh hơn kém rõ ràng *** thang đo cao nhất về mặt thông tin 
+1-5 định lượng tăng ( định lượng 4 5)
+5-1 định tính tăng (định tính 1234)
+  kiểu dữ liệu (kiểu số và chuỗi)
+B4 : data processing (error, format, missing, none, duplicate, noise, không nhất quán)
+Xử lý noise làm mịn 
+B5 : explanating data analysis (EDA) tìm ra insight bên trong data 
+-tổng hợp dữ liệu định lượng cout
+-xác xuất thống kê 
+-trực quan hoá dữ liệu

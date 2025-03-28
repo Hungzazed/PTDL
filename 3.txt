@@ -1,0 +1,58 @@
+Phân tích suy diễn (từ cái đã biết suy ra cái chưa biết)
+population : Tổng thể
+lưu ý:
+để suy diễn ta cần
+	- giả thuyết suy diễn H0
+	- mức sai lầm: 10%, 5%, 1% (giá trị alpha)
+	-ứng với mức sai lầm độ tin cậy: 90%, 95%, 99%
+	trong python khi không thiết lập thì mặc định mức sai lầm là 5%
+
+//data(sample) + điều kiện toán học
+
+dựa vào dữ liệu chạy hàm python để tính p-value từ đó để chấp nhận hoặc bác bỏ suy diễn đó
+	nếu p-value < alpha -> reject bác bỏ suy diễn H0
+	nếu p-value >= alpha -> accept chấp nhận suy diễn H0 
+
+Dạng 1: One Sample T-Test cho mẫu nhỏ hơn 30(for n < 30)
+H0: giả thuyết giá trị trung bình có bằng giá trị nào đó hay không
+
+Dạng 2: One Sample Z-Test cho mẫu >= 30(for n >= 30)
+H0: giả thuyết giá trị trung bình có bằng giá trị nào đó hay không
+
+Dạng 3: Two sample T-Test cho mẫu nhỏ hơn 30(for n < 30) 
+H0: trung bình 2 biến định lượng là bằng nhau
+
+Dạng 4: Two sample Z-Test dùng cho số lượng mẫu lớn hơn 30(for n > 30)
+H0: trung bình 2 biến định lượng là bằng nhau
+
+Dạng 5: kiểm định pearson (Tương quan)
+H0: kiểm tra mối quan hệ giữa hai biến đinh lượng rx,y = 0
+rx,y nếu r > 0 -> tương quan thuận
+	nếu r == 0 -> ko tương quan
+	nếu r < 0 -> tương quan nghịch
+|rx,y| thuộc [-1, 1]
+nhỏ hơn 0.5 là yếu, từ 0.5-> 0.65 trung bình, 0.65-0.8 khá, 0.8-0.95 tốt trên 0.95 là hoàn hảo
+dùng kiểm định pearson
+
+Dạng 6: kiểm định fisher dùng cho 2 biến định tính
+H0: Hai biến độc lập
+lưu ý: dùng khi giá trị thể hiện của 2 biến định tính là nhị phân(binary)
+
+Dạng 7: Kiểm định chiSpuare
+H0: Hai biến độc lập
+lưu ý: dùng khi giá trị thể hiện của 2 biến định tính không là nhị phân(binary)
+
+Dạng 8: ANOVA (kiểm định biến định tính + định lượng)
+H0: Trung bình các biến trên các nhóm là bằng nhau
+
+Dạng 9: Kiểm định ANOVA 2 way (2 định tính + định lượng)
+H0: Trung bình các biến trên các nhóm là bằng nhau
+
+Dạng 10: Phân tích hồi quy tuyến tính
+Phân tích sự ảnh hưởng, tác động qua lại của 2 biến định lượng
+M3 = f(M1) (M3 : biến phụ thộc, M1 : biến độc lập)
+f() -> A0 + A1 * x (A0 : hệ số tự do intercep, A1 hệ số cho biến M1 coficient kí hiệu cof)
+dùng phương pháp ols
+----------------
+M3 = f(M1, M2)
+f() -> a0 + a1*x1 + a2*x2

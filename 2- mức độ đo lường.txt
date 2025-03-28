@@ -1,0 +1,65 @@
+2- mức độ đo lường
+	-> tập trung
+	-> phân tán
+
+2.1 Nhóm các đại lượng đo lường mức độ tập trung
+	đây là những đại lượng toán học mô tả sự phân bổ của các giá trị dữ liệu trên trục số
+	count, min, max, mean
+	giá trị trung bình được xem là giá trị đại biểu cho tập dữ liệu. giá trị trung bình được gọi là giá trị kì vọng của tập dữ liệu
+
+	Tùy theo mỗi bài toán người ta có nhiều cách để tính giá trị trung bình khác nhau
+	giá trị trung bình rất dễ bị nhạy cảm (ảnh hưởng) bởi các giá trị bất thường, ngoại lai, ngoại biên. do đó khi muốn dùng giá trị trung bình làm đại biểu cho tập dữ liệu thì chúng ta phải xử lí các giá trị bất thường trước khi tính.
+	median (trung vị): đây là giá trị chia tập dữ liệu làm 2 phần có số lượng phần tử bằng nhau.
+	Cách tính lưu ý data set phải được sort tăng
+
+	vd : 5, 5, 7, 8, 10 -> trung vị là 7
+	     5, 5, 7, 8, 9 ,12 -> trung vị bằng 7.5
+	     5, 5, 7, 8, 9 ,1200 -> trung vị vẫn bằng 7.5
+		
+	-> trung vị không bị tác động bởi giá trị ngoại biên
+
+	mode(yếu vị) là giá trị đại biểu cho data set nhằm thể hiện giá trị có số lượng phần tử xuất hiện nhiều nhất
+	VD: doanh nghiệp có mode đại lý bán hàng trên 1 tháng là 500 triệu -> đại đa số các đại lý này bán hàng là 500tr
+	2,2,2,2,5,7 -> mode = 2
+	2,2,2,2,5,7000 -> mode = 2
+	2, 2, 4, 4, 5, 7 -> không có mode	
+	-> yếu vị không bị tác động bởi giá trị ngoại biên, data set có thể có mode or không
+	phân vị (p) là p - 1 giá trị chia data set làm p phần có số lượng phần tử bằng nhau
+	
+	-> tứ phân vị:	
+		+ là 3 giá trị được kí hiệu bởi q1, q2, q3
+		ví dụ: công ty có 100 nhân viên biết tứ phân vị về lương là 
+		q1 =  7tr 
+		q2 = 12tr	=> có 25 nhân viên lương thấp hơn 7 tr và 25 nv cao hơn 25tr và trong 2 kia cx vậy
+ 		q3 = 20tr
+		IQR = q3 - q1
+	trong tứ phân vị q2 = trung vị
+	q1 = 0.25, q2 = 0.5, q3 = 0.75
+	-> thập phân vị:
+	có các giá trị từ p1 -> p9, mỗi khoảng là 10% số lượng
+	tương ứng p1 = 0.1, p2 = 0.3 -> p9 = 0.9
+2.2 các đại lượng đo lường mức độ phân tán
+	đây là nhóm đại lượng dùng để đo lường mức độ phân tán (chênh lệch, mức độ ổn định) của các giá trị trong data set
+	-> phân tán thấp -> ổn định cao -> dễ đưa ra quyết định -> giá trị trung bình có khả năng đại biểu cho tập dữ liệu
+	-> phân tán cao -> ổn định thấp -> khó đưa ra quyết định -> gia trị trung bình không còn ý nghĩa đại biểu cho data set
+	* tuy nhiên mức độ phân tán thấp sẽ dễ dẫn đến đánh mất sự đa dạng của dữ liệu, ngược lại mức độ phân tán cao sẽ giúp cho dữ liệu trở nên đa dạng
+	tính mức độ phân tán
+	range = max - min
+	IQR
+	delta d 
+	variance(var) (phương sai) = zicma bình phương -> là đại lượng hoàn hảo để đo lường mức độ phân tán
+	tuy nhiên trong tính toán người ta thường dùng độ lệch chuẩn = standand deviation(std) = căn variance = zicma
+	
+	nếu 2 dataset cần so sánh có giá trị trung bình chênh lệch quá nhiều thì ta không thể sử dụng trực tiếp giá trị std để so sánh mức độ phân tán mà phải thông qua 1 giá trị khác gọi là cofficient of variance (CV) = zicma / Mean(avg)
+
+pandas là thư viện xử lí dữ liệu dạng dataframe
+matplotlib: nền vẽ hình
+seaborn: vẽ biểu đồ phân tích dữ liệu
+numpy: tính toán số
+
+
+Trực quan hóa dữ liệu
+với biểu đồ bar/ column/ count để thể hiện độ lớn của biến số theo 1 hàm tổng hợp nhằm so sánh giữa nhiều biến số với nhau
+biểu đồ pie/ donut dùng để biểu thị độ lớn dưới dạng tỉ lệ của biến số
+biểu đồ (scatter) phân tán nhằm biểu thị mối liên hệ của 2 biến số mang dữ liệu định lượng
+biểu đồ là biểu đồ line thể hiện độ lớn theo hàm tổng hợp của biến số, theo thứ tự or time
